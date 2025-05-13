@@ -2,12 +2,16 @@
 
 [![Open your Home Assistant instance and show the add-ons store.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https://github.com/DanielSousa/reolinkdoorbell)
 
-This add-on listens for Reolink doorbell button press events and notifies you with a persistent notification containing a link to a dedicated "Doorbell" tab in your Home Assistant dashboard. It can also wake a tablet running the Home Assistant dashboard using Fully Kiosk Browser or the Companion App.
+Easily integrate your Reolink doorbell with Home Assistant! This add-on listens for doorbell button press events and notifies you with a persistent notification containing a link to a dedicated "Doorbell" tab in your Home Assistant dashboard. It can also wake a tablet running the Home Assistant dashboard using Fully Kiosk Browser or the Companion App.
 
-## One-Click Install
-1. Click the badge above or add this repository to your Home Assistant Add-on Store:
+---
+
+## 🚀 One-Click Install
+1. **Click the badge above** or add this repository to your Home Assistant Add-on Store:
    `https://github.com/DanielSousa/reolinkdoorbell`
 2. The add-on will appear in the store for one-click install and configuration.
+
+---
 
 ## Features
 - Detects Reolink doorbell button press via Home Assistant WebSocket API
@@ -24,7 +28,6 @@ All configuration is done via the Home Assistant add-on UI. No files need to be 
 - `tablet_ip`: IP address of the wall tablet
 - `fully_kiosk_password`: Password for Fully Kiosk REST API
 - `device_control_method`: `fully_kiosk` or `companion_app`
-- `modal_timeout`: Seconds before modal auto-dismisses (not used in this approach)
 
 ### Required: Home Assistant Token
 You must provide a Home Assistant long-lived access token as an environment variable named `HASS_TOKEN` when running the add-on. See [Home Assistant docs](https://developers.home-assistant.io/docs/auth_api/#long-lived-access-token) for how to create one.
