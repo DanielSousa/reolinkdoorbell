@@ -19,6 +19,7 @@ TABLET_IP = config["tablet_ip"]
 FULLY_KIOSK_PASSWORD = config["fully_kiosk_password"]
 DEVICE_CONTROL_METHOD = config["device_control_method"]
 MODAL_TIMEOUT = config["modal_timeout"]
+DASHBOARD_TAB_PATH = config.get("dashboard_tab_path", "home")
 
 # User must set this to their mobile app notify service (e.g., notify.mobile_app_tablet)
 COMPANION_NOTIFY_SERVICE = os.environ.get("COMPANION_NOTIFY_SERVICE", "notify.mobile_app_tablet")
@@ -85,11 +86,12 @@ def wake_tablet_companion_app():
         print(f"Error sending Companion App notification: {e}")
 
 def trigger_doorbell_tab_notification():
-    # Send a persistent notification with a link to the Doorbell dashboard tab
+    # Send a persistent notification with a link to the user-configured dashboard tab
+    url_path = f"/lovelace/{DASHBOARD_TAB_PATH}"
     service_url = f"{HASS_URL}/api/services/persistent_notification/create"
     payload = {
         "title": "Doorbell",
-        "message": "Someone is at the door! [View Doorbell Tab](/lovelace/doorbell)",
+        "message": f"Someone is at the door! [View Doorbell Tab]({url_path})",
     }
     try:
         resp = requests.post(service_url, headers=HEADERS, json=payload, timeout=3)

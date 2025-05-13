@@ -22,10 +22,12 @@ options:
   fully_kiosk_password: ""
   device_control_method: "fully_kiosk"
   modal_timeout: 30
+  dashboard_tab_path: "home"
 schema:
   camera_entity: str
   lock_entity: str
   tablet_ip: str
   fully_kiosk_password: str
   device_control_method: list(fully_kiosk|companion_app)
-  modal_timeout: int 
+  modal_timeout: int
+  dashboard_tab_path: str 
