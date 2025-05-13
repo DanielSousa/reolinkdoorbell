@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- Write clear, concise, and well-documented code
+- Prioritize readability and maintainability
+- Use descriptive commit messages
+- Write unit and integration tests for all critical logic
+- Review code for security and performance
+- Follow DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principles
+- Document any non-obvious decisions or patterns in the codebase
+- Ensure your add-on runs as a non-root user unless absolutely necessary
+- Document all configuration options in config.yaml
+- Use environment variables for secrets, not hardcoded values
+- Test your add-on locally using the Home Assistant Supervisor dev environment

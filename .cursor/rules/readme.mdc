@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- Keep the README.md up to date with setup, usage, and contribution instructions
+- Include a project overview, installation steps, and contact information
+- Document all configuration options with YAML examples
+- Add a changelog or release notes section
+- Link to the official Home Assistant add-on documentation: https://developers.home-assistant.io/docs/add-ons/

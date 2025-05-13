@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- Read the README.md and CONTRIBUTING.md files
+- Review the official Home Assistant add-on tutorial (https://developers.home-assistant.io/docs/add-ons/tutorial/)
+- Set up the Home Assistant dev environment for local testing
+- Review the formatting and best practices rules in .cursor/rules
+- Run tests locally before pushing changes
+- Ask questions early and document answers for future contributors
+- Understand the structure: config.yaml, Dockerfile, run.sh, README.md
+- Learn how to build and test the add-on using the Supervisor panel or CLI
