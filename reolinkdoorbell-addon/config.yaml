@@ -1,0 +1,31 @@
+name: "Reolink Doorbell Add-on"
+version: "0.1.0"
+slug: reolinkdoorbell_addon
+description: >-
+  Add-on to trigger modal with live Reolink video and actions on doorbell press.
+startup: services
+boot: auto
+arch:
+  - amd64
+  - armv7
+  - aarch64
+host_network: true
+privileged:
+  - NET_ADMIN
+map:
+  - config:rw
+  - ssl:ro
+options:
+  camera_entity: "camera.reolink_doorbell"
+  lock_entity: "lock.front_door"
+  tablet_ip: "192.168.1.100"
+  fully_kiosk_password: ""
+  device_control_method: "fully_kiosk"
+  modal_timeout: 30
+schema:
+  camera_entity: str
+  lock_entity: str
+  tablet_ip: str
+  fully_kiosk_password: str
+  device_control_method: list(fully_kiosk|companion_app)
+  modal_timeout: int 

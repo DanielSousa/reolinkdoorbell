@@ -1,0 +1,7 @@
+name: Reolink Doorbell Add-ons
+url: https://github.com/DanielSousa/reolinkdoorbell
+maintainer: Daniel Sousa
+addons:
+  - reolinkdoorbell_addon
+description: >-
+  Home Assistant add-ons for Reolink Doorbell integration, including live video and actionable notifications. 
